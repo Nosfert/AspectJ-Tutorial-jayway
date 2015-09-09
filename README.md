@@ -1,13 +1,14 @@
 # AspectJ-Tutorial-jayway
 AspectJ-Tutorial blog.jayway.com
 
-Clean and build the project with 
+#Initially do
+Go to <parent-folder> and run
 mvn clean install
 
-If you want to package the application so you can run do
+#If you want to package and run applications
+Go to <application-folder> or <parent-folder> and run
 mvn package
-
-If you want to run a application you can easily do it after the package phase. 
+##Run application 
 Go to the <application-folder>/target and run 
 java -jar <application-file>.jar
 
