@@ -2,7 +2,7 @@
 AspectJ-Tutorial blog.jayway.com
 
 ### Initially do
-Go to <parent-folder> and run
+Go to [parent-folder] and run
 
 mvn clean install
 
