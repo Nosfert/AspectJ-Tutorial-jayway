@@ -7,23 +7,23 @@ import org.aspectj.lang.JoinPoint;
 @Aspect
 public class YourAspect {
 
-    //Defines a pointcut that we can use in the @Before,@After,@Around specifications
+    //Defines a pointcut that we can use in the @Before,@After, @AfterThrowing, @AfterReturning,@Around specifications
     //The pointcut will look for the @YourAnnotation
     @Pointcut("@annotation(yourAnnotationVariableName)")
     public void annotationPointCutDefinition(YourAnnotation yourAnnotationVariableName){
     }
 
-    //Defines a pointcut that we can use in the @Before,@After,@Around specifications
-    //The pointcut is a catch all pointcut with the scope of execution
+    //Defines a pointcut that we can use in the @Before,@After, @AfterThrowing, @AfterReturning,@Around specifications
+    //The pointcut is a catch-all pointcut with the scope of execution
     @Pointcut("execution(* *(..))")
     public void atExecution(){}
 
     //Defines a pointcut where the @YourAnnotation exists
-    //And combines that with a catch all pointcut with the scope of execution
+    //and combines that with a catch-all pointcut with the scope of execution
     @Around("annotationPointCutDefinition(yourAnnotationVariableName) && atExecution()")
     //ProceedingJointPoint = the reference of the call to the method.
-    //Difference between ProceedingJointPoint and JointPoint is that a JointPoint can't be continued(proceeded)
-    //A ProceedingJointPoint can be continued(proceeded) and is needed for an Around advice
+    //The difference between ProceedingJointPoint and JointPoint is that a JointPoint can't be continued (proceeded)
+    //A ProceedingJointPoint can be continued (proceeded) and is needed for an Around advice
     public Object aroundAdvice(ProceedingJoinPoint joinPoint, YourAnnotation yourAnnotationVariableName) throws Throwable {
         if(yourAnnotationVariableName.isRun()) {
             //Default Object that we can use to return to the consumer

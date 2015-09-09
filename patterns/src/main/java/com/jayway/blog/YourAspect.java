@@ -30,8 +30,8 @@ public class YourAspect {
     //com.jayway.YourClass.yourMethodBefore(..) = PackageName . ClassName . methodName (parameters)
     @Around("execution (!private void com.jayway.blog.YourClass.yourMethodAround(Integer,..))")
     //ProceedingJointPoint = the reference of the call to the method.
-    //Difference between ProceedingJointPoint and JointPoint is that a JointPoint can't be continued(proceeded)
-    //A ProceedingJointPoint can be continued(proceeded) and is needed for an Around advice
+    //The difference between ProceedingJointPoint and JointPoint is that a JointPoint can't be continued (proceeded)
+    //A ProceedingJointPoint can be continued (proceeded) and is needed for an Around advice
     public Object aroundAdvice(ProceedingJoinPoint joinPoint) throws Throwable {
         //Default Object that we can use to return to the consumer
         Object returnObject = null;
