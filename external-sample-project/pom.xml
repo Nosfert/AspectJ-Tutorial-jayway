@@ -1,29 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.jaway.blog.aspectj</groupId>
         <artifactId>parent</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <artifactId>annotations-element-value-pair</artifactId>
+    <artifactId>example-sample-project</artifactId>
     <packaging>jar</packaging>
+    <name>Jayway Blog Example about AspectJ Example sample project</name>
 
-    <name>Jayway Blog Example about AspectJ Annotations</name>
-    <url>http://maven.apache.org</url>
-    <developers>
-        <developer>
-            <name>Steve Widinghoff</name>
-        </developer>
-    </developers>
     <dependencies>
         <dependency>
-            <groupId>org.aspectj</groupId>
-            <artifactId>aspectjrt</artifactId>
+            <groupId>com.jaway.blog.aspectj</groupId>
+            <artifactId>annotations-element-value-pair</artifactId>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
-
     <build>
         <plugins>
             <plugin>
@@ -34,11 +28,18 @@
                     <complianceLevel>1.8</complianceLevel>
                     <source>1.8</source>
                     <target>1.8</target>
+                    <aspectLibraries>
+                        <aspectLibrary>
+                            <groupId>com.jaway.blog.aspectj</groupId>
+                            <artifactId>annotations-element-value-pair</artifactId>
+                        </aspectLibrary>
+                    </aspectLibraries>
                 </configuration>
                 <executions>
                     <execution>
                         <goals>
                             <goal>compile</goal>
+                            <goal>test-compile</goal>
                         </goals>
                     </execution>
                 </executions>
@@ -86,7 +87,6 @@
                     <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
-
         </plugins>
     </build>
 </project>
