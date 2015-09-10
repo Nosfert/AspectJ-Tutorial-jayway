@@ -74,6 +74,9 @@
                 <plugin>
                     <artifactId>maven-assembly-plugin</artifactId>
                     <version>2.5.5</version>
+                    <configuration>
+                        <appendAssemblyId>false</appendAssemblyId>
+                    </configuration>
                     <executions>
                         <execution>
                             <id>a-make-assembly</id>
