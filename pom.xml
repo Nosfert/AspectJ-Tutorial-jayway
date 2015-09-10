@@ -26,6 +26,7 @@
         <module>patterns</module>
         <module>annotations</module>
         <module>annotations-element-value-pair</module>
-        <module>external-sample-project</module>
+        <module>example-sample-project</module>
+        <module>annotations-element-value-pair-without-main-class</module>
     </modules>
 </project>

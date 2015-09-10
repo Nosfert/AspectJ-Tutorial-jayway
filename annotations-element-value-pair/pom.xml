@@ -10,7 +10,7 @@
     <artifactId>annotations-element-value-pair</artifactId>
     <packaging>jar</packaging>
 
-    <name>Jayway Blog Example about AspectJ Annotations</name>
+    <name>Jayway Blog Example about AspectJ Annotations element-value pair</name>
     <url>http://maven.apache.org</url>
     <developers>
         <developer>
